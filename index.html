@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Pointspeed</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS, then Self CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-dark">
+    <header>
+        <h1 class="text-center text-primary pt-2 pb-2">Pointspeed</h1>
+    </header>
+    <main>
+        <!-- Main Game Screen -->
+        <div class="container-fluid">
+            <!-- ROW 1 | GAME SCREEN -->
+            <div class="row ml-3 mr-3">
+                <!-- COLUMN 1 | STORE -->
+                <div class="p-2 w-25">
+                    <div class="col-sm bg1 p-2">
+                        <h2 class="text-center font-weight-bold underline">Store</h2>
+                        <div id="store" class="text-right pt-4 pr-5 pb-5">
+                            <div class="p-1">
+                                <span class="ownedOutput" id="squareGPS"></span> &nbsp;
+                                <span class="ownedOutput" id="numSquareGeneratorsOwned"></span> &nbsp;
+                                <img src="img/purchase/squarePurchase.png" alt="purchase square" id="squarePurchase" data-toggle="tooltip" data-html="true" data-original-title="">
+                            </div>
+                            <div class="p-1">
+                                <span class="ownedOutput" id="circleGPS"></span> &nbsp;
+                                <span class="ownedOutput" id="numCircleGeneratorsOwned"></span> &nbsp;
+                                <img src="img/purchase/circlePurchase.png" alt="purchase circle" id="circlePurchase" data-toggle="tooltip" data-html="true" data-original-title="">
+                            </div>
+                            <div class="p-1">
+                                <span class="ownedOutput" id="triangleGPS"></span> &nbsp;
+                                <span class="ownedOutput" id="numTriangleGeneratorsOwned"></span> &nbsp;
+                                <img src="img/purchase/trianglePurchase.png" alt="purchase triangle" id="trianglePurchase" data-toggle="tooltip" data-html="true" data-original-title="">
+                            </div>
+                            <div class="p-1">
+                                <span class="ownedOutput" id="diamondGPS"></span> &nbsp;
+                                <span class="ownedOutput" id="numDiamondGeneratorsOwned"></span> &nbsp;
+                                <img src="img/purchase/diamondPurchase.png" alt="purchase diamond" id="diamondPurchase" data-toggle="tooltip" data-html="true" data-original-title="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END COLUMN 1 | STORE -->
+                <!------------------------------------------------------------------------------------------------->
+                <!-- COLUMN 2 | PLAY AREA -->
+                <div class="p-2 w-50">
+                    <div class="col-sm bg2 p-2">
+                        <div id="gameScreen1">
+                            <h1 class="text-center font-weight-bold underline"><span id="userPoints"></span></h1>
+                            <h2 class="text-center font-weight-bold underline">Goal: <span id="pointGoal1"></span></h2>
+                            <h2 class="text-center font-weight-bold underline"><span id="timeElapsed"></span></h2>
+                            <div class="text-center">
+                                <button type="button" class="btn btn-primary circleButton" id="incrementPointsButton">+</button>
+                            </div>
+                        </div>
+                        <div class="text-center" id="gameScreen2">
+                            <h1>Congratulations!</h1>
+                            <h2>You reached <span id="pointGoal2"></span> points!</h2>
+                            <h2>Your time was: <span id="timeElapsed"></span></h2>
+                            <h3>Squares: <span id="numSquareGeneratorsOwned1"></span></h3>
+                            <h3>Circles: <span id="numCircleGeneratorsOwned1"></span></h3>
+                            <h3>Triangles: <span id="numTriangleGeneratorsOwned1"></span></h3>
+                            <h3>Diamonds: <span id="numDiamondGeneratorsOwned1"></span></h3>
+                            <button type="button" class="btn btn-primary" id="resetButton">Reset Game</button>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- END COLUMN 2 | PLAY AREA -->
+                <!------------------------------------------------------------------------------------------------->
+                <!-- COLUMN 3 | UPGRADE AREA-->
+                <div class="p-2 w-25">
+                    <div class="col-sm bg3 p-2">
+                        <h2 class="text-center font-weight-bold underline">Upgrades</h2>
+                        <div id="upgrade" class="text-left pt-4 pl-5 pb-5">
+                            <div class="p-1">
+                                <img src="img/upgrade/squareUpgrade.png" alt="upgrade square" id="squareUpgrade" data-toggle="tooltip" title="" data-toggle="tooltip" data-html="true" data-original-title="">
+                            </div>
+                            <div class="p-1">
+                                <img src="img/upgrade/circleUpgrade.png" alt="upgrade circle" id="circleUpgrade" data-toggle="tooltip" title="" data-toggle="tooltip" data-html="true" data-original-title="">
+                            </div>
+                            <div class="p-1">
+                                <img src="img/upgrade/triangleUpgrade.png" alt="upgrade triangle" id="triangleUpgrade" data-toggle="tooltip" title="" data-toggle="tooltip" data-html="true" data-original-title="">
+                            </div>
+                            <div class="p-1">
+                                <img src="img/upgrade/diamondUpgrade.png" alt="upgrade diamond" id="diamondUpgrade" data-toggle="tooltip" title="" data-toggle="tooltip" data-html="true" data-original-title="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END COLUMN 3 | UPGRADE AREA-->
+            </div>
+            <!-- END ROW 1 | GAME SCREEN-->
+        </div>
+    </main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS, then Self JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

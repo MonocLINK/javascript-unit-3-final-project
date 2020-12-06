@@ -1,0 +1,57 @@
+.bg1 {
+    background-color: #BBBE64;
+    border-radius: 20px;
+    padding-left: 10px;
+}
+
+.bg2 {
+    background-color: #C0C5C1;
+    border-radius: 20px;
+}
+
+.bg3 {
+    background-color: #EAF0CE;
+    border-radius: 20px;
+}
+
+.container {
+    column-gap: 20px !important;
+}
+
+.circleButton {
+    border-radius: 50%;
+    font-size: 1em;
+    width: 100px;
+    height: 100px;
+}
+
+.ownedOutput {
+    font-size: 1.5em;
+}
+
+#gameScreen2 {
+    display: none;
+}
+
+.tooltip-inner,
+.tooltip-arrow {
+    font-size: 1.5em;
+}
+
+.cantAfford {
+    animation-name: color;
+    animation-duration: .25s;
+    animation-iteration-count: 2;
+}
+
+@keyframes color {
+    0% {
+        background-color: none;
+    }
+    50% {
+        background-color: #ff0000;
+    }
+    100% {
+        background-color: none;
+    }
+}
